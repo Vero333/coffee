@@ -1,14 +1,17 @@
 <div class="coffee-menu">
   <mat-grid-list cols="2" rowHeight="2:1">
-    <mat-grid-tile *ngFor="let coffee of coffees">
+    <mat-grid-tile *ngFor="let coffee of coffees; let i=index">
       <mat-grid-tile-header>
         <h2 mat-line>{{coffee.name}}</h2>
       </mat-grid-tile-header>
       <img src={{coffee.image}} alt={{coffee.name}}>
       <mat-grid-tile-footer>
         <span mat-line>Price: {{coffee.price}}</span>
+        <input type=number max="10" #order>
+        <button mat-icon-button (click)="onClick(i, order.value)">DONE</button>
       </mat-grid-tile-footer>
     </mat-grid-tile>
   </mat-grid-list>
   <a href="https://www.freepik.com/free-vector/coffee-types_803190.htm">Designed by Freepik</a>
 </div>
+<app-order [totalOrder]='total'></app-order>

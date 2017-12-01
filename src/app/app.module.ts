@@ -7,13 +7,13 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { AppComponent } from './app.component';
 
 import { CoffeeMenuComponent } from './coffee-menu/coffee-menu.component';
-import { FooterComponent } from './footer/footer.component';
+import { OrderComponent } from './order/order.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CoffeeMenuComponent,
-    FooterComponent
+    OrderComponent
   ],
   imports: [
     BrowserModule,
